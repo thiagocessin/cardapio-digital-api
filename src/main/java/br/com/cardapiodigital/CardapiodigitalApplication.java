@@ -1,4 +1,4 @@
-package com.cardapiodigital.cardapiodigital;
+package br.com.cardapiodigital;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
