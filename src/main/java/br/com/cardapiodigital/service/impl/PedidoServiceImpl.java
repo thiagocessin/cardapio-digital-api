@@ -31,4 +31,11 @@ public class PedidoServiceImpl implements PedidoService {
         return this.pedidoRepository.findBySolicitanteId(idSolicitante)
                 .stream().map(PedidoEntity::toDto).collect(Collectors.toList());
     }
+
+	@Override
+	public List<PedidoDTO> findAll() {
+		return this.pedidoRepository.findAll()
+				.stream().map(PedidoEntity::toDto).collect(Collectors.toList());
+	}
+
 }

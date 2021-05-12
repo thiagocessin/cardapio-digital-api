@@ -28,4 +28,12 @@ public class ProdutoCardapioController {
     public ResponseEntity<List<ProdutoCardapioDTO>> findAllByRestaurante(@PathVariable("idRestaurante") Long idRestaurante) {
         return ResponseEntity.ok(this.produtoCardapioService.findByRestauranteResponsavel(idRestaurante));
     }
+    
+    @GetMapping
+    public ResponseEntity<List<ProdutoCardapioDTO>> findAll() {
+        return ResponseEntity.ok(this.produtoCardapioService.findAll());
+    }
+    
+    
+  
 }

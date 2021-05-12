@@ -7,4 +7,5 @@ import java.util.List;
 public interface ProdutoCardapioService {
     ProdutoCardapioDTO saveOrUpdate(ProdutoCardapioDTO produtoCardapio);
     List<ProdutoCardapioDTO> findByRestauranteResponsavel(Long idRestaurante);
+    List<ProdutoCardapioDTO> findAll();
 }
