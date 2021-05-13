@@ -10,4 +10,5 @@ public class CardapiodigitalApplication {
 		SpringApplication.run(CardapiodigitalApplication.class, args);
 	}
 
+	
 }
