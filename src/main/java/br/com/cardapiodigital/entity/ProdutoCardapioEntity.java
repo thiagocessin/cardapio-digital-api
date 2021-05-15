@@ -19,6 +19,8 @@ public class ProdutoCardapioEntity {
     private String nome;
 
     private BigDecimal valor;
+    
+    private String descricao;
 
     public ProdutoCardapioDTO toDto() {
         ProdutoCardapioDTO dto = new ProdutoCardapioDTO();
@@ -26,6 +28,9 @@ public class ProdutoCardapioEntity {
         dto.setNome(nome);
         dto.setValor(valor);
         dto.setRestauranteResponsavel(restauranteResponsavel);
+        dto.setDescricao(descricao);
         return dto;
     }
+    
 }
+

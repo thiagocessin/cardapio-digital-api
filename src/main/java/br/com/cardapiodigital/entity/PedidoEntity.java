@@ -28,6 +28,11 @@ public class PedidoEntity {
     private BigDecimal valorTaxaEntrega;
 
     private LocalDateTime dataHoraPedido;
+    
+    private String descricao;
+    
+    @OneToMany
+    private List<ProdutoCardapioEntity> listaProdutos;
 
     public PedidoDTO toDto() {
         PedidoDTO dto = new PedidoDTO();
@@ -37,6 +42,7 @@ public class PedidoEntity {
         dto.setStatus(status);
         dto.setValorTotal(valorTotal);
         dto.setValorTaxaEntrega(valorTaxaEntrega);
+        dto.setDescricao(descricao);
 
         return dto;
     }

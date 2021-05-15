@@ -1,15 +1,15 @@
 package br.com.cardapiodigital.dto;
 
 
-import br.com.cardapiodigital.entity.PedidoEntity;
-import br.com.cardapiodigital.entity.enums.StatusPedidoEnum;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.Data;
-
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
+
+import br.com.cardapiodigital.entity.PedidoEntity;
+import br.com.cardapiodigital.entity.ProdutoCardapioEntity;
+import br.com.cardapiodigital.entity.enums.StatusPedidoEnum;
+import lombok.Data;
 
 @Data
 public class PedidoDTO {
@@ -19,7 +19,9 @@ public class PedidoDTO {
     private BigDecimal valorTotal;
     private BigDecimal valorTaxaEntrega;
     private LocalDateTime dataHoraPedido;
-
+    private List<ProdutoCardapioDTO> listaProdutos;
+    private String descricao;
+    
     public PedidoEntity toEntity() {
         PedidoEntity ent = new PedidoEntity();
         ent.setCodigoPedido(codigoPedido);
@@ -28,6 +30,17 @@ public class PedidoDTO {
         ent.setStatus(status);
         ent.setValorTaxaEntrega(valorTaxaEntrega);
         ent.setValorTotal(valorTotal);
+        ent.setListaProdutos(listaDtoToEntity());
+        ent.setDescricao(descricao);
         return ent;
+    }
+    
+    
+    public List<ProdutoCardapioEntity> listaDtoToEntity(){
+    	return this.listaProdutos
+    		.stream()
+    		.map(ProdutoCardapioDTO::toEntity)
+    		.collect(Collectors.toList());
+    	
     }
 }
