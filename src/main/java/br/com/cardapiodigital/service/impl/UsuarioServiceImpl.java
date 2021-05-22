@@ -5,6 +5,7 @@ import br.com.cardapiodigital.entity.UsuarioEntity;
 import br.com.cardapiodigital.repository.UsuarioRepository;
 import br.com.cardapiodigital.service.UsuarioService;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -32,4 +33,13 @@ public class UsuarioServiceImpl implements UsuarioService {
     			 .stream()
     			 .map(UsuarioEntity::toDto).collect(Collectors.toList());
     }
+    
+    @Override
+    public List<UsuarioDTO> findAllById(Long id) {
+    	 return this.usuarioRepository.findAllById(Arrays.asList(id))
+    			 .stream()
+    			 .map(UsuarioEntity::toDto).collect(Collectors.toList());
+    }
+    
+    
 }
