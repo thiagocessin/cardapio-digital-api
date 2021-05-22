@@ -28,5 +28,10 @@ public class PedidoController {
     public ResponseEntity<List<PedidoDTO>> findBySolicitante(@PathVariable("idSolicitante") Long idSolicitante) {
         return ResponseEntity.ok(this.pedidoService.findAllBySolicitante(idSolicitante));
     }
+    
+    @GetMapping
+    public ResponseEntity<List<PedidoDTO>> findAll() {
+        return ResponseEntity.ok(this.pedidoService.findAll());
+    }
 
 }

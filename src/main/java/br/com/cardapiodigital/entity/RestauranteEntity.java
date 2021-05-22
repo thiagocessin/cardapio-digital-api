@@ -1,6 +1,7 @@
 package br.com.cardapiodigital.entity;
 
 import br.com.cardapiodigital.dto.RestauranteDTO;
+import br.com.cardapiodigital.entity.enums.TipoRestauranteEnum;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -25,6 +26,8 @@ public class RestauranteEntity {
             orphanRemoval = true
     )
     private List<ProdutoCardapioEntity> produtosDisponiveis;
+    
+    private TipoRestauranteEnum tipoRestaurante;
 
     public RestauranteDTO toDto() {
         RestauranteDTO dto = new RestauranteDTO();
@@ -33,6 +36,7 @@ public class RestauranteEntity {
         dto.setProdutosDisponiveis(
                 produtosDisponiveis.stream().map(ProdutoCardapioEntity::toDto).collect(Collectors.toList())
         );
+        dto.setTipoRestaurante(tipoRestaurante);
         return dto;
     }
 }
