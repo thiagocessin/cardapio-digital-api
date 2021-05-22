@@ -1,0 +1,367 @@
+{
+	"info": {
+		"_postman_id": "9d5f9912-4101-43e3-b8ab-7458035cc01b",
+		"name": "cardapio-digital-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Pedidos",
+			"item": [
+				{
+					"name": "Pedidos - GET",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/pedidos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"pedidos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pedidos - POST",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"codigoPedido\":12,\r\n        \"solicitante\":{\r\n        \"id\":1,\r\n        \"email\":\"usuario1@teste.com\",\r\n        \"senha\":\"123\",\r\n        \"endereco\":{\r\n            \"logradouro\":\"Rua teste\",\r\n            \"numero\":123,\r\n            \"cidade\":\"Sao Paulo\",\r\n            \"bairro\":\"Mooca\",\r\n            \"UF\":\"SP\",\r\n            \"complemento\":\"\"\r\n        }\r\n        },\r\n    \"status\":\"ACEITO\",\r\n    \"valorTotal\":100,\r\n    \"valorTaxaEntrega\":10,\r\n    \"dataHoraPedido\":\"\",\r\n    \"listaProdutos\":[\r\n        {\r\n            \"id\":1,\r\n            \"restauranteResponsavel\":1,\r\n            \"nome\":\"lasanha\",\r\n            \"valor\":123.00,\r\n            \"descricao\":\"lasanha bolonhesa\"\r\n        },\r\n         {\r\n            \"id\":2,\r\n            \"restauranteResponsavel\":1,\r\n            \"nome\":\"pizza\",\r\n            \"valor\":13.00,\r\n            \"descricao\":\"Pizza marguerita\"\r\n        }\r\n    ]\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/pedidos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"pedidos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "Usuarios - POST",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":1,\r\n    \"email\":\"usuario1@teste.com\",\r\n    \"senha\":\"123\",\r\n    \"endereco\":{\r\n        \"logradouro\":\"Rua teste\",\r\n        \"numero\":123,\r\n        \"cidade\":\"Sao Paulo\",\r\n        \"bairro\":\"Mooca\",\r\n        \"UF\":\"SP\",\r\n        \"complemento\":\"\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usuarios - checkUserIsLogged",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/usuarios/checkUserIsLogged/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"usuarios",
+								"checkUserIsLogged",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usuarios - findAll",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usuarios - findAllById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":1,\r\n    \"email\":\"usuario1@teste.com\",\r\n    \"senha\":\"123\",\r\n    \"endereco\":{\r\n        \"logradouro\":\"Rua teste\",\r\n        \"numero\":123,\r\n        \"cidade\":\"Sao Paulo\",\r\n        \"bairro\":\"Mooca\",\r\n        \"UF\":\"SP\",\r\n        \"complemento\":\"\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/usuarios/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"usuarios",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Produto-cardapio",
+			"item": [
+				{
+					"name": "Produto-cardapio - GET",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/restaurantes/produtos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"restaurantes",
+								"produtos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Produto-cardapio - POST",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"id\":123,\r\n\"restauranteResponsavel\":1,\r\n\"nome\":\"Lasanha\",\r\n\"valor\":123.32\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/restaurantes/produtos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"restaurantes",
+								"produtos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Restaurantes",
+			"item": [
+				{
+					"name": "Restaurantes - GET",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/restaurantes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"restaurantes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Restaurantes - POST",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"2\",\r\n    \"nome\":\"Ragazzo\",\r\n        \"produtosDisponiveis\":[{\r\n            \"id\":3,\r\n            \"restauranteResponsavel\":2,\r\n            \"nome\":\"Lasanha\",\r\n            \"valor\":123.32\r\n\r\n        }],\r\n    \"tipoRestaurante\":\"ITALIANO\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/restaurantes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"restaurantes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
