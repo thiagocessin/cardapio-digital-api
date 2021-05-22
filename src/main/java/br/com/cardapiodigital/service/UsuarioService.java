@@ -8,4 +8,5 @@ import br.com.cardapiodigital.entity.UsuarioEntity;
 public interface UsuarioService {
     UsuarioDTO saveOrUpdate(UsuarioDTO u);
     public List<UsuarioDTO> findAll();
+    public List<UsuarioDTO> findAllById(Long id);
 }

@@ -30,7 +30,9 @@ public class PedidoDTO {
         ent.setStatus(status);
         ent.setValorTaxaEntrega(valorTaxaEntrega);
         ent.setValorTotal(valorTotal);
-        ent.setListaProdutos(listaDtoToEntity());
+        if(this.listaProdutos != null) {
+        	ent.setListaProdutos(listaDtoToEntity());
+        }
         ent.setDescricao(descricao);
         return ent;
     }
