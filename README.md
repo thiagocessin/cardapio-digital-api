@@ -1,5 +1,5 @@
 <h1 align="center">
-  FIAP - API - Cardápio Digital
+  API - Cardápio Digital
 </h1>
 
 <p align="center">
