@@ -7,7 +7,7 @@
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-colaboradores">Colaboradores</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-app">App</a>
+
 </p>
 
 ## 🗨 Sobre
@@ -45,6 +45,5 @@ Desenvolvido pelos profissionais:
 - [Rafael Magalhães](https://www.linkedin.com/in/rlmagalhaes/)
 - [Gabriel Leme](https://linkedin.com/in/gabriel-leme-71325b150)
 
-## 📱 App
 
 
