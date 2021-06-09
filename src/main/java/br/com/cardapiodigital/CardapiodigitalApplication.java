@@ -9,9 +9,8 @@ public class CardapiodigitalApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(CardapiodigitalApplication.class, args);
 		
-		
-		
 	}
+	
 
 	
 }
